@@ -28,3 +28,11 @@ Usage
         In [3]: operations.subtract(1, 2)
 
         In [4]: operations.multiply(1, 2)
+
+Testing reads:
+
+.. ipython::
+
+        In [1]: x = open("pyproject.toml").read()
+
+        In [2]: print(x)
