@@ -22,5 +22,11 @@ jobs:
       run: |
         python -m pip install --upgrade pip
         python -m pip install --upgrade tox
-    - name: Build
+    - name: Build dist
       run: tox -e build
+    - name: Upload artifacts
+      uses: actions/upload-artifact@v2
+      with:
+        name: dist
+        path: dist/*
+      upload-artifact
